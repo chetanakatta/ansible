@@ -1,17 +1,17 @@
 - name: variable preference
   hosts: localhost
-  #vars:
-  # WISHES: "morning from play"
-  #vars_files:
-  #- vars.yaml
-  #vars_prompt:
-  #- name: WISHES
-  #  prompt: please enter WISHES
-  #  private: false
+  vars:
+   WISHES: "morning from play"
+  vars_files:
+  - vars.yaml
+  vars_prompt:
+  - name: WISHES
+    prompt: please enter WISHES
+    private: false
   tasks:
   - name: check preference
-  #  vars:
-  #   WISHES: "morning from task"
+    vars:
+     WISHES: "morning from task"
     ansible.builtin.debug:
      msg: "hello, good {{WISHES}}"
        
@@ -20,3 +20,5 @@
   # 3rd vars file
   # 4th prompt
   # 5th play level
+  # 6th inventory
+  # 7th role level--later
