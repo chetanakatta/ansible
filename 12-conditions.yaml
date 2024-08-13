@@ -9,6 +9,9 @@
   - name: print user info  
     ansible.builtin.debug:
      msg: "user info: {{USER}}"
+  - name: create user
+    ansible.builtin.command:
+    when: USER.rc != 0 #condition  
   - name: say hello
     ansible.builtin.debug:
      msg: "hello"  
