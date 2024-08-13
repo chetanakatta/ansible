@@ -4,10 +4,10 @@
    WISHES: "morning from play"
   #vars_files:
   #- vars.yaml
-  vars_prompt:
-  - name: WISHES
-    prompt: please enter WISHES
-    private: false
+  #vars_prompt:
+  #- name: WISHES
+  #  prompt: please enter WISHES
+  #  private: false
   tasks:
   - name: check preference
   #  vars:
@@ -18,3 +18,4 @@
   # 1st prefence is arguments
   # 2nd is task
   # 3rd vars file
+  # 4th prompt
