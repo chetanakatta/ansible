@@ -3,4 +3,13 @@
   tasks:
   - name: print default value
     ansible.builtin.debug:
-     msg: "hello {{Friend | default('Ansi') }}"
+     msg: "hello {{Friend | default('Ansible') }}"
+
+- name: upper case
+  hosts: localhost
+  vars:
+   greeting: "hello good morning" 
+  tasks:
+  - name: covert into upper case
+    ansible.buitlin.debug:
+     msg: "{{greeting | upper]}"    
