@@ -1,13 +1,13 @@
 - name: check numbers
   hosts: localhost
   vars_prompt: #prompts are always considered as text/string so we use filters ( | )
-  - name: number
+  - name: number 
     prompt: please enter number
     private: no
   tasks: 
   - name: number is less than 10
     ansible.builtin.debug:
-     msg: "given number {{number}} is less than 10"
+     msg: "given number {{number}} is less than 10" #if we give text it will considered as zero
     when: number | int < 10
   - name: number is greater than or equal to 10 
     ansible.builtin.debug:
