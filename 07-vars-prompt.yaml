@@ -1,6 +1,6 @@
 - name: variables from prompt
   hosts: localhost
-  vars_prompt:
+  vars_prompt: #prmopts are always considered as text/string
   - name: USERNAME #it should come from prompt
     prompt: please enter your username
     private: false # we can see from terminal
