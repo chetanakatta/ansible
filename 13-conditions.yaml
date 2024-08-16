@@ -1,5 +1,5 @@
 - name: check numbers
-  hosts: loaclhost
+  hosts: localhost
   vars_prompt: 
   - name: number
     prompt: please enter number
